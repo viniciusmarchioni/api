@@ -365,7 +365,7 @@ def verifyGuest(cpf=str(), tableID=str()):
 def verificarTableID(tableID=str()):
     if func.invalidValue(tableID,10,10):
         return False
-    cursor.execute(f"SELECT EXISTS (SELECT 1 FROM information_schema.tables WHERE table_name = '{tableid}')")
+    cursor.execute(f"SELECT EXISTS (SELECT 1 FROM information_schema.tables WHERE table_name = '{tableID}')")
     return cursor.fetchone()[0]
 
 def realizarSorteio(tableID=str()):
